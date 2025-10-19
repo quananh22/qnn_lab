@@ -1,0 +1,17 @@
+---
+timestamp: 20947547341
+command: qnn-net-run --model convert/build_resnet50/lib/x86_64-linux-clang/libresnet_50.so --backend /home/quan/workspace/qairt/2.39.0.250926/lib/x86_64-linux-clang/libQnnGpu.so --input_list data/input_list.txt --profiling_level detailed
+execution_mode: synchronous
+inferences_completed: 1
+graphs:
+  - graph_name: resnet_50
+    input_tensors:
+    - tensor_name: input
+      id: 1
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1,224,224,3]
+    output_tensors:
+    - tensor_name: logits
+      id: 397
+      datatype: QNN_DATATYPE_FLOAT_32
+      dimensions: [1,1000]
